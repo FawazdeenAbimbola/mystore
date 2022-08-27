@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myStore</title>
+    <link rel="icon" href=""/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault(); onFormSubmit();" >
+                    <div>
+                        <label>Product name</label>
+                    <input type="text" name="productName" id="productName" placeholder="Product name">
+                    </div>
+                    <div>
+                        <input type="text" name="productId" id="productId" placeholder="Product ID/Batch No">
+                        </div>
+                        <div>
+                            <input type="date" name="date" id="date" placeholder="Expiry Date">
+                        </div>
+                    
+                        <div class="form-action-buttons">
+                            <input type="submit" value="Submit">
+                        </div>
+                </form>
+            </td>
+            <td>
+               <table class="list" id="productlist">
+                <thead>
+                    <tr>
+                        <th>Product name</th>
+                        <th>Product ID/ Batch No</th>
+                        <th>Expiry Date</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+               </table> 
+            </td>
+        </tr>
+    </table>
+</body>
+<script src="date.js"></script>
+<script src="status.js"></script>
+<script src="main.js"></script>
+</html>
