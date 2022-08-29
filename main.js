@@ -7,6 +7,7 @@ function readFormData() {
     let formData = {};
     formData["productName"] = document.getElementById('productName').value;
     formData["productID"] = document.getElementById('productId').value;
+
     formData["date"] = document.getElementById('date').value;
     return formData;
 }
@@ -27,12 +28,15 @@ function insertProducts(data) {
     let distance = (expirydate - todayDate);
     let status = Math.floor((distance / (1000 * 60 * 60 * 24))+ 1);
         if(status < 0) {
-                cell4.innerHTML= "Expired";
+            
+            cell4.innerHTML= "Expired";
             }
 if(status > 0) {
     cell4.innerHTML = "Good";
+    
 }
 if(status === 3) {
+
     alert('3 days Remaining, Please use!');
 }
 
